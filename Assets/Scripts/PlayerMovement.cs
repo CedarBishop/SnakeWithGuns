@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public List<PlayerSegment> playerSegments = new List<PlayerSegment>();
     public FixedJoystick leftJoystick;
-    public FixedJoystick rightJoystick;
     public float movementSpeed;
 
     private Vector2 movementDirection = Vector2.right;

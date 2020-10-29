@@ -930,13 +930,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5305770328219433110, guid: 7dd0a89ee55189a4b931a2e554e24adf, type: 3}
+      propertyPath: rightJoystick
+      value: 
+      objectReference: {fileID: 1554650880}
     - target: {fileID: 6628956470145824090, guid: 7dd0a89ee55189a4b931a2e554e24adf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6628956470145824090, guid: 7dd0a89ee55189a4b931a2e554e24adf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6628956470145824090, guid: 7dd0a89ee55189a4b931a2e554e24adf, type: 3}
       propertyPath: m_LocalPosition.z
