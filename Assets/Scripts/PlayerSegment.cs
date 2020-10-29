@@ -8,22 +8,28 @@ public class PlayerSegment : MonoBehaviour
     public float segmentDistance = 0.5f;
     private int segmentNumber;
     private PlayerMovement player;
-    private void Start()
+
+    private bool initialised;
+    public void Init()
     {
         player = FindObjectOfType<PlayerMovement>();
         player.playerSegments.Add(this);
         segmentNumber = player.playerSegments.Count - 1;
+        initialised = true;
     }
 
     private void FixedUpdate()
     {
-        if (segmentNumber == 0)
+        if (initialised)
         {
-            MoveTowardsTargets(player.transform.position);
-        }
-        else
-        {
-            MoveTowardsTargets(player.playerSegments[segmentNumber - 1].transform.position);
+            if (segmentNumber == 0)
+            {
+                MoveTowardsTargets(player.transform.position);
+            }
+            else
+            {
+                MoveTowardsTargets(player.playerSegments[segmentNumber - 1].transform.position);
+            }
         }
     }
 

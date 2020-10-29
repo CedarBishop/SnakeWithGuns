@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6628956470145824093}
   - component: {fileID: 5305770328219433110}
   - component: {fileID: 1990418705591090348}
+  - component: {fileID: 1934833365751521906}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5bf739690d15cf64c8873f140a7be860, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   rightJoystick: {fileID: 0}
   aimOrigin: {fileID: 9204136257818677845}
   firingPoint: {fileID: 828375957246468949}
-  projectilePrefab: {fileID: 8471012655902261294, guid: 5a24dfb632202d44b8697d2f2785be71, type: 3}
+  projectilePrefab: {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
   shootDelay: 0.5
 --- !u!135 &1990418705591090348
 SphereCollider:
@@ -147,6 +148,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1934833365751521906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628956470145824092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e7f51bbeb991a847aa59a652142db51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!1 &6771341910274921540
 GameObject:
   m_ObjectHideFlags: 0
