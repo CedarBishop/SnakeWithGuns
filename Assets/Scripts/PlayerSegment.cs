@@ -10,7 +10,7 @@ public class PlayerSegment : MonoBehaviour
     private PlayerMovement player;
 
     private bool initialised;
-    public void Init()
+    public virtual void Init()
     {
         player = FindObjectOfType<PlayerMovement>();
         player.playerSegments.Add(this);
@@ -18,7 +18,7 @@ public class PlayerSegment : MonoBehaviour
         initialised = true;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (initialised)
         {

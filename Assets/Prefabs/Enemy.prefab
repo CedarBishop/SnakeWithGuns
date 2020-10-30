@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 9191816245005582602}
   - component: {fileID: 9191816245005582605}
   - component: {fileID: 9191816245005582604}
-  - component: {fileID: 6366241402759405147}
+  - component: {fileID: 4640772883781754345}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
---- !u!114 &6366241402759405147
+--- !u!114 &4640772883781754345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,11 +234,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 9191816245005582607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dcce62770399c8418c11d05d6ba6c85, type: 3}
+  m_Script: {fileID: 11500000, guid: a1d0a8c385a5cc34b98ce021e3a6a711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
   segmentDistance: 2
+  aimOrigin: {fileID: 9191816245060257060}
+  firingPoint: {fileID: 9191816245532480363}
+  projectile: {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
+  shootDelay: 1
+  attackRange: 5
 --- !u!1 &9191816245060257063
 GameObject:
   m_ObjectHideFlags: 0
