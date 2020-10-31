@@ -7,8 +7,10 @@ public class PlayerMovement : MonoBehaviour
     public List<PlayerSegment> playerSegments = new List<PlayerSegment>();
     public FixedJoystick leftJoystick;
     public float movementSpeed;
+    public float slerpSpeed;
 
-    private Vector2 movementDirection = Vector2.right;
+    private Vector3 targetDirection = Vector3.right;
+    private Vector3 currentDirection = Vector3.right;
     private Rigidbody rigidbody;
 
     void Start()
@@ -20,16 +22,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (leftJoystick.Direction.magnitude > 0.5f)
         {
-            movementDirection = leftJoystick.Direction;
+            targetDirection = new Vector3(leftJoystick.Direction.x, 0, leftJoystick.Direction.y);
         }
     }
 
     private void FixedUpdate()
     {
-        Vector3 movementVelocity = new Vector3(movementDirection.x, 0, movementDirection.y) * movementSpeed * Time.fixedDeltaTime;
+        currentDirection = Vector3.Slerp(currentDirection, targetDirection, slerpSpeed * Time.fixedDeltaTime);
+        Vector3 movementVelocity = currentDirection * movementSpeed * Time.fixedDeltaTime;
         rigidbody.velocity = movementVelocity;
     }
-
-
-
 }

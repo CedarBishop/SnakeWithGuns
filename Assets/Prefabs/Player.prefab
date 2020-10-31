@@ -118,6 +118,7 @@ MonoBehaviour:
   playerSegments: []
   leftJoystick: {fileID: 0}
   movementSpeed: 250
+  slerpSpeed: 3
 --- !u!114 &5305770328219433110
 MonoBehaviour:
   m_ObjectHideFlags: 0
