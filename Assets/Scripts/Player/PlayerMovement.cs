@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Vector3 movementVelocity = new Vector3(movementDirection.x, 0, movementDirection.y) * movementSpeed * Time.fixedDeltaTime;
-        print("movement direction: " + movementDirection);
-        print("movement velocity: " + movementVelocity);
         rigidbody.velocity = movementVelocity;
     }
 

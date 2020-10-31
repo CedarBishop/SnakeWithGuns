@@ -6,10 +6,10 @@ public class PlayerSegment : MonoBehaviour
 {
     public float movementSpeed;
     public float segmentDistance = 0.5f;
-    private int segmentNumber;
-    private PlayerMovement player;
+    protected int segmentNumber;
+    protected PlayerMovement player;
 
-    private bool initialised;
+    protected bool initialised;
     public virtual void Init()
     {
         player = FindObjectOfType<PlayerMovement>();

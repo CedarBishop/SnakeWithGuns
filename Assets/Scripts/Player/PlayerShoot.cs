@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
+    public static event Action<Vector3> onPlayerShoot;
     public FixedJoystick rightJoystick;
     public Transform aimOrigin;
     public Transform firingPoint;
@@ -50,7 +52,10 @@ public class PlayerShoot : MonoBehaviour
         }
 
         Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
-
+        if (onPlayerShoot != null)
+        {
+            onPlayerShoot(aimOrigin.forward);
+        }
         StartCoroutine("DelayShoot");
     }
 

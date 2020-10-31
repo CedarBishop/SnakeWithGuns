@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8471012655902261293}
   - component: {fileID: 4032108297527577537}
   m_Layer: 0
-  m_Name: Player Projectile
+  m_Name: Ally Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580d5a75e4c15694f9ecf41cb66f2889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialForce: 500
+  initialForce: 400
   damage: 1

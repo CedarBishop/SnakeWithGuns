@@ -43,7 +43,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 561037c170e6f3d4896a21aa6e045714, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 9191816245005582605, guid: 536771302ac9cd942bd7b32ccd1a2c30, type: 3}
+  enemyPrefabs:
+  - {fileID: 9191816245005582605, guid: fad2e99e2e0c5e14da75e4e2ad60c121, type: 3}
+  - {fileID: 9191816245005582605, guid: 536771302ac9cd942bd7b32ccd1a2c30, type: 3}
   maxDistanceFromPlayer: 7
   minDistanceFromPlayer: 3.5
   spawnDelay: 5

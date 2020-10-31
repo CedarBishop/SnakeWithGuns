@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSegments: []
   leftJoystick: {fileID: 0}
-  movementSpeed: 200
+  movementSpeed: 250
 --- !u!114 &5305770328219433110
 MonoBehaviour:
   m_ObjectHideFlags: 0

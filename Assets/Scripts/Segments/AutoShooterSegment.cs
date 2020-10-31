@@ -2,29 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoShooterSegment : PlayerSegment
+public class AutoShooterSegment : ShooterSegment
 {
-    public Transform aimOrigin;
-    public Transform firingPoint;
-    public AllyProjectile projectile;
-    public float shootDelay;
-    public float attackRange;
-
-    private bool canShoot;
-    public override void Init()
-    {
-        base.Init();
-        StartCoroutine("DelayShoot");
-    }
-
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
-        Shoot();
+        if (initialised == false)
+        {
+            return;
+        }
+        FindTarget();
     }
 
 
-    void Shoot ()
+    void FindTarget ()
     {
         if (canShoot == false)
         {
@@ -56,17 +47,6 @@ public class AutoShooterSegment : PlayerSegment
                 distanceToClosestEnemy = distanceToCurrentEnemy;
             }
         }
-
-        Vector3 direction = (closestEnemy.transform.position - transform.position).normalized;
-        aimOrigin.transform.forward = direction;
-        Instantiate(projectile, firingPoint.position, firingPoint.rotation);
-        StartCoroutine("DelayShoot");
-    }
-
-    IEnumerator DelayShoot()
-    {
-        canShoot = false;
-        yield return new WaitForSeconds(shootDelay);
-        canShoot = true;
-    }
+        Shoot(closestEnemy.transform.position);
+    }    
 }

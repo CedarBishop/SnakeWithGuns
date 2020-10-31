@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Enemy enemyPrefab;
+    public Enemy[] enemyPrefabs;
     public float maxDistanceFromPlayer;
     public float minDistanceFromPlayer;
     public float spawnDelay;
@@ -31,7 +31,17 @@ public class EnemySpawner : MonoBehaviour
                 player.transform.position.y,
                 player.transform.position.z + zDistance);
 
-            Instantiate(enemyPrefab, randPostion, Quaternion.identity);
+            if (enemyPrefabs != null)
+            {
+                if (enemyPrefabs.Length == 1)
+                {
+                    Instantiate(enemyPrefabs[0], randPostion, Quaternion.identity);
+                }
+                else if (enemyPrefabs.Length > 1)
+                {
+                    Instantiate(enemyPrefabs[Random.Range(0,enemyPrefabs.Length)], randPostion, Quaternion.identity);
+                }
+            }            
         }
     }
 
