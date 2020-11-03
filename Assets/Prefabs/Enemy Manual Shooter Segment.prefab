@@ -212,6 +212,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 91092381349141676, guid: 5a24dfb632202d44b8697d2f2785be71, type: 3}
   attackDistance: 5
   shootDelay: 1
+  earnedScore: 1
 --- !u!114 &9191816245005582604
 MonoBehaviour:
   m_ObjectHideFlags: 0

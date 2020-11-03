@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public List<PlayerSegment> playerSegments = new List<PlayerSegment>();
-    public FixedJoystick leftJoystick;
+    private FixedJoystick leftJoystick;
     public float movementSpeed;
     public float slerpSpeed;
 
@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        leftJoystick = UIManager.instance.leftJoystick;
     }
 
     private void Update()

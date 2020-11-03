@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     public Projectile projectilePrefab;
     public float attackDistance;
     public float shootDelay;
+    public int earnedScore;
 
     private PlayerMovement player;
     private PlayerSegment segment;

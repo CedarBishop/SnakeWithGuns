@@ -13,6 +13,7 @@ public class EnemyHealth : Health
 
     protected override void Death()
     {
+        GameManager.instance.AddToScore(enemy.earnedScore);
         enemy.OnDeath();
         Destroy(this);
     }

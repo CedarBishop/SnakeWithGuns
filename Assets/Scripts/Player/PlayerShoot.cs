@@ -6,18 +6,19 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public static event Action<Vector3> onPlayerShoot;
-    public FixedJoystick rightJoystick;
     public Transform aimOrigin;
     public Transform firingPoint;
     public Projectile projectilePrefab;
     public float shootDelay;
 
+    private FixedJoystick rightJoystick;
     private bool isShooting;
     private bool canShoot;
     
     void Start()
     {
-        canShoot = true;   
+        canShoot = true;
+        rightJoystick = UIManager.instance.rightJoystick;
     }
 
     void Update()
