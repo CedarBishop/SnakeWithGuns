@@ -24,6 +24,14 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (CheckIfShouldShoot())
+        {
+            Shoot();
+        }
+    }
+
+    protected bool CheckIfShouldShoot()
+    {
         if (player != null)
         {
             if (Vector3.Distance(player.transform.position, transform.position) < attackDistance)
@@ -32,11 +40,18 @@ public class Enemy : MonoBehaviour
                 aimOrigin.transform.forward = direction;
                 if (canShoot)
                 {
-                    Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
-                    StartCoroutine("DelayShoot");
+                    return true;
                 }
             }
         }
+
+        return false;
+    }
+
+    protected virtual void Shoot()
+    {
+        Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
+        StartCoroutine("DelayShoot");
     }
 
     IEnumerator DelayShoot ()

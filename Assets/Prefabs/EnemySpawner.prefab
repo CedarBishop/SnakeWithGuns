@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 9191816245005582605, guid: fad2e99e2e0c5e14da75e4e2ad60c121, type: 3}
+  - {fileID: 8686188528023389915, guid: 4fe75e925845fbd4195ab5bf9668b94a, type: 3}
   - {fileID: 9191816245005582605, guid: 536771302ac9cd942bd7b32ccd1a2c30, type: 3}
   maxDistanceFromPlayer: 7
   minDistanceFromPlayer: 3.5
