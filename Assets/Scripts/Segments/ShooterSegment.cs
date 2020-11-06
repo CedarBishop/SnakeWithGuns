@@ -24,11 +24,16 @@ public class ShooterSegment : PlayerSegment
         canShoot = true;
     }
 
-    protected void Shoot (Vector3 target)
+    protected virtual void Shoot (Vector3 target)
     {
         Vector3 direction = (target - transform.position).normalized;
         aimOrigin.transform.forward = direction;
         Instantiate(projectile, firingPoint.position, firingPoint.rotation);
         StartCoroutine("DelayShoot");
+    }
+
+    protected virtual void Shoot()
+    {
+
     }
 }
