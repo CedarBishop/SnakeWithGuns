@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ public enum UIStates {Game, Pause}
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance = null;
+
+    public event Action abilityButtonPressed;
 
     public GameObject gameUIParent;
     public GameObject pauseUIParent;
@@ -63,5 +66,13 @@ public class UIManager : MonoBehaviour
     public void UpdateTime(float time)
     {
         timerText.text = "Elapsed Time: " + time.ToString("F1");
+    }
+
+    public void AbilityButton ()
+    {
+        if (abilityButtonPressed != null)
+        {
+            abilityButtonPressed();
+        }
     }
 }
