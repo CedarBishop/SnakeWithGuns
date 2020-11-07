@@ -8,6 +8,7 @@ public class TimedAOEShooterSegment : ShooterSegment
 
     protected override void FixedUpdate()
     {
+        base.FixedUpdate();
         if (canShoot)
         {
             Shoot();

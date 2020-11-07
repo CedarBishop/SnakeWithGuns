@@ -21,10 +21,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
+        Vector3 tempDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
+        if (tempDirection.magnitude > 0.5f)
+        {
+            targetDirection = tempDirection.normalized;
+        }
+#else
         if (leftJoystick.Direction.magnitude > 0.5f)
         {
             targetDirection = new Vector3(leftJoystick.Direction.x, 0, leftJoystick.Direction.y);
         }
+#endif
+
     }
 
     private void FixedUpdate()
