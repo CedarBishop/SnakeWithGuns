@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public float attackDistance;
     public float shootDelay;
     public int earnedScore;
+    public float cameraShakeMagnitude;
+    public float cameraShakeDuration;
 
     private PlayerMovement player;
     private PlayerSegment segment;
@@ -50,6 +52,7 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Shoot()
     {
+        CameraShake.instance.StartShake(cameraShakeMagnitude, cameraShakeDuration);
         Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
         StartCoroutine("DelayShoot");
     }

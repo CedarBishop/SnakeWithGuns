@@ -9,6 +9,9 @@ public class ShooterSegment : PlayerSegment
     public AllyProjectile projectile;
     public float shootDelay;
     public float attackRange;
+    public float cameraShakeMagnitude;
+    public float cameraShakeDuration;
+
 
     protected bool canShoot;
     public override void Init()
@@ -29,6 +32,7 @@ public class ShooterSegment : PlayerSegment
         Vector3 direction = (target - transform.position).normalized;
         aimOrigin.transform.forward = direction;
         Instantiate(projectile, firingPoint.position, firingPoint.rotation);
+        CameraShake.instance.StartShake(cameraShakeMagnitude, cameraShakeDuration);
         StartCoroutine("DelayShoot");
     }
 

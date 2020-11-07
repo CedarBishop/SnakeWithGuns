@@ -21,6 +21,7 @@ public class AOEEnemy : Enemy
             aimOrigin.transform.rotation = Quaternion.Euler(new Vector3(0.0f, yRotation, 0.0f));
             Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
         }
+        CameraShake.instance.StartShake(cameraShakeMagnitude, cameraShakeDuration);
         StartCoroutine("DelayShoot");
     }
 }

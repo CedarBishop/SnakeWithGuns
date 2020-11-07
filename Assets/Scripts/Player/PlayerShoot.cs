@@ -10,6 +10,9 @@ public class PlayerShoot : MonoBehaviour
     public Transform firingPoint;
     public Projectile projectilePrefab;
     public float shootDelay;
+    public float cameraShakeMagnitude;
+    public float cameraShakeDuration;
+
 
     private FixedJoystick rightJoystick;
     private bool isShooting;
@@ -53,6 +56,7 @@ public class PlayerShoot : MonoBehaviour
         }
 
         Instantiate(projectilePrefab, firingPoint.position, firingPoint.rotation);
+        CameraShake.instance.StartShake(cameraShakeMagnitude, cameraShakeDuration);
         if (onPlayerShoot != null)
         {
             onPlayerShoot(aimOrigin.forward);
