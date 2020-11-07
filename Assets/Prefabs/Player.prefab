@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5305770328219433110}
   - component: {fileID: 1990418705591090348}
   - component: {fileID: 1934833365751521906}
+  - component: {fileID: 8610165086487077766}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -116,7 +117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSegments: []
-  leftJoystick: {fileID: 0}
   movementSpeed: 250
   slerpSpeed: 3
 --- !u!114 &5305770328219433110
@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5789faba0e3db8e46b04c94568c80d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightJoystick: {fileID: 0}
   aimOrigin: {fileID: 9204136257818677845}
   firingPoint: {fileID: 828375957246468949}
   projectilePrefab: {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
@@ -162,6 +161,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+--- !u!114 &8610165086487077766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628956470145824092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d710d602393344e428b049c2c7e50ec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shieldPrefab: {fileID: 7229520119251856314, guid: fb044cf84ec1bbe4a91a4bcca05a0461, type: 3}
 --- !u!1 &6771341910274921540
 GameObject:
   m_ObjectHideFlags: 0

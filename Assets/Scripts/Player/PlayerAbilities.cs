@@ -8,7 +8,7 @@ public class PlayerAbilities : MonoBehaviour
 {
     private Abilities currentAbility;
 
-    public GameObject shieldPrefab;
+    public Shield shieldPrefab;
 
     void Start()
     {
@@ -40,8 +40,8 @@ public class PlayerAbilities : MonoBehaviour
 
     void ShieldAbility ()
     {
-        GameObject shield = Instantiate(shieldPrefab, transform.position, Quaternion.identity);
-        Destroy(shield, 2.0f);
+        Shield shield = Instantiate(shieldPrefab, transform);
+        Destroy(shield.gameObject, 2.0f);
     }
 
 
