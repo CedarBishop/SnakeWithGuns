@@ -226,7 +226,7 @@ MonoBehaviour:
   attackDistance: 5
   shootDelay: 1
   earnedScore: 2
-  cameraShakeMagnitude: 0.1
+  cameraShakeMagnitude: 0.05
   cameraShakeDuration: 0.1
   projectilesFiredPerShot: 8
 --- !u!114 &8226850588719437237
@@ -248,7 +248,7 @@ MonoBehaviour:
   projectile: {fileID: 4032108297527577537, guid: 90476f18d2ec5bf40be02f043eb9a48a, type: 3}
   shootDelay: 2
   attackRange: 5
-  cameraShakeMagnitude: 0.1
+  cameraShakeMagnitude: 0.05
   cameraShakeDuration: 0.1
   projectilesFiredPerShot: 8
 --- !u!1 &9191816245060257063

@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         timer = 0;
         score = 0;
+        UIManager.instance.UpdateScore(0);
     }
 
     public void AddToScore (int value)
