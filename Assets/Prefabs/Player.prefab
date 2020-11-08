@@ -135,7 +135,7 @@ MonoBehaviour:
   firingPoint: {fileID: 828375957246468949}
   projectilePrefab: {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
   shootDelay: 0.5
-  cameraShakeMagnitude: 0.2
+  cameraShakeMagnitude: 0.15
   cameraShakeDuration: 0.1
 --- !u!135 &1990418705591090348
 SphereCollider:
