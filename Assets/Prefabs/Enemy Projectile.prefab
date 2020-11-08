@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialForce: 400
   damage: 1
+  timeTillDestroy: 10

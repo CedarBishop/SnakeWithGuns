@@ -5,12 +5,15 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float initialForce;
-    private Rigidbody rigidbody;
     public int damage;
+    public float timeTillDestroy;
+
+    private Rigidbody rigidbody;
+    
     private void Start ()
     {
         rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(transform.forward * initialForce);
-        Destroy(gameObject,10);
+        Destroy(gameObject, timeTillDestroy);
     }
 }

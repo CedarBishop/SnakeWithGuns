@@ -135,7 +135,7 @@ MonoBehaviour:
   firingPoint: {fileID: 828375957246468949}
   projectilePrefab: {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
   shootDelay: 0.5
-  cameraShakeMagnitude: 0.4
+  cameraShakeMagnitude: 0.2
   cameraShakeDuration: 0.1
 --- !u!135 &1990418705591090348
 SphereCollider:
@@ -217,7 +217,6 @@ GameObject:
   - component: {fileID: 3352294042477579093}
   - component: {fileID: 7653197547051808752}
   - component: {fileID: 6918204967550901237}
-  - component: {fileID: 4661617879803452754}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -289,19 +288,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4661617879803452754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7801596217189329289}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8211761629837772196
 GameObject:
   m_ObjectHideFlags: 0

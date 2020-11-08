@@ -224,7 +224,7 @@ MonoBehaviour:
   firingPoint: {fileID: 9191816245532480363}
   projectilePrefab: {fileID: 91092381349141676, guid: d093b74b63c291245aec35cea3ba8aff, type: 3}
   attackDistance: 5
-  shootDelay: 1
+  shootDelay: 4
   earnedScore: 2
   cameraShakeMagnitude: 0.05
   cameraShakeDuration: 0.1
@@ -246,7 +246,7 @@ MonoBehaviour:
   aimOrigin: {fileID: 9191816245060257060}
   firingPoint: {fileID: 9191816245532480363}
   projectile: {fileID: 4032108297527577537, guid: 90476f18d2ec5bf40be02f043eb9a48a, type: 3}
-  shootDelay: 2
+  shootDelay: 4
   attackRange: 5
   cameraShakeMagnitude: 0.05
   cameraShakeDuration: 0.1

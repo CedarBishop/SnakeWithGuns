@@ -35,24 +35,19 @@ public class CameraShake : MonoBehaviour
 
     private IEnumerator Shake()
     {
-        Vector3 originalPosition = transform.localPosition;
-        Vector3 originalRotation = transform.localRotation.eulerAngles;
-
+        Vector3 originalPosition = transform.position;
         float timeElapsed = 0.0f;
 
         while (timeElapsed < cameraShakeDuration)
         {
             float x = Random.Range(-1.0f, 1.0f) * cameraShakeMagnitude;
-            float y = Random.Range(-1.0f, 1.0f) * cameraShakeMagnitude;
-            float Z = Random.Range(-1.0f, 1.0f) * cameraShakeMagnitude;    // Rotation
+            float z = Random.Range(-1.0f, 1.0f) * cameraShakeMagnitude;
 
-            //transform.localPosition = new Vector3(x, transform.localPosition.y, y);
-            transform.localRotation = Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, Z);
+            transform.position += new Vector3(x, 0, z);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-        transform.localRotation = Quaternion.Euler(originalRotation);
-        transform.localPosition = originalPosition;
+        transform.position = originalPosition;
     }
 
 
