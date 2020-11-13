@@ -10,6 +10,7 @@ public class PlayerSegment : MonoBehaviour
     protected PlayerMovement player;
 
     protected bool initialised;
+
     public virtual void Init()
     {
         player = FindObjectOfType<PlayerMovement>();
@@ -40,5 +41,16 @@ public class PlayerSegment : MonoBehaviour
             Vector3 directionToTarget = (target - transform.position).normalized;
             transform.position = Vector3.MoveTowards(transform.position, target, movementSpeed * Time.fixedDeltaTime);
         }
+    }
+
+    public void ResetSegmentNumber (int index)
+    {
+        segmentNumber = index;
+    }
+
+    public void RemoveFromList()
+    {
+        player.playerSegments.Remove(this);
+        Destroy(gameObject);
     }
 }

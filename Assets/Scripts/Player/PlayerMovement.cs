@@ -42,4 +42,12 @@ public class PlayerMovement : MonoBehaviour
         Vector3 movementVelocity = currentDirection * movementSpeed * Time.fixedDeltaTime;
         rigidbody.velocity = movementVelocity;
     }
+
+    public void ResetSegmentNumbers ()
+    {
+        for (int i = 0; i < playerSegments.Count; i++)
+        {
+            playerSegments[i].ResetSegmentNumber(i);
+        }
+    }
 }
