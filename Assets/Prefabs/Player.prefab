@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1990418705591090348}
   - component: {fileID: 1934833365751521906}
   - component: {fileID: 8610165086487077766}
+  - component: {fileID: 3960511597802644888}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -116,7 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e53a5a42d48b6b45a3e215e626397bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSegments: []
   movementSpeed: 250
   slerpSpeed: 3
 --- !u!114 &5305770328219433110
@@ -176,6 +176,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldPrefab: {fileID: 7229520119251856314, guid: fb044cf84ec1bbe4a91a4bcca05a0461, type: 3}
+--- !u!114 &3960511597802644888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6628956470145824092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cada323a808114f862aab0104302a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSegments: []
+  maxSegments: 2
+  speed: 0
+  fireRate: 0
+  bulletsSpawned: 0
 --- !u!1 &6771341910274921540
 GameObject:
   m_ObjectHideFlags: 0

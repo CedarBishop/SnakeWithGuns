@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public List<PlayerSegment> playerSegments = new List<PlayerSegment>();
     private FixedJoystick leftJoystick;
     public float movementSpeed;
     public float slerpSpeed;
@@ -43,11 +42,4 @@ public class PlayerMovement : MonoBehaviour
         rigidbody.velocity = movementVelocity;
     }
 
-    public void ResetSegmentNumbers ()
-    {
-        for (int i = 0; i < playerSegments.Count; i++)
-        {
-            playerSegments[i].ResetSegmentNumber(i);
-        }
-    }
 }
