@@ -12,7 +12,6 @@ public class ShooterSegment : PlayerSegment
     public float cameraShakeMagnitude;
     public float cameraShakeDuration;
 
-
     protected bool canShoot;
     public override void Init()
     {

@@ -9,19 +9,21 @@ public class PlayerShoot : MonoBehaviour
     public Transform aimOrigin;
     public Transform firingPoint;
     public Projectile projectilePrefab;
-    public float shootDelay;
     public float cameraShakeMagnitude;
     public float cameraShakeDuration;
 
-
     private FixedJoystick rightJoystick;
+    private PlayerPowerups playerPowerups;
     private bool isShooting;
     private bool canShoot;
+    private float shootDelay;
+    
     
     void Start()
     {
         canShoot = true;
         rightJoystick = UIManager.instance.rightJoystick;
+        playerPowerups = GetComponent<PlayerPowerups>();
     }
 
     void Update()
@@ -61,6 +63,7 @@ public class PlayerShoot : MonoBehaviour
         {
             onPlayerShoot(aimOrigin.forward);
         }
+        shootDelay = playerPowerups.GetFireRateStat();
         StartCoroutine("DelayShoot");
     }
 
