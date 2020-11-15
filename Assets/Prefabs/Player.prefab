@@ -189,10 +189,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSegments: []
-  maxSegments: 2
-  speed: 0
-  fireRate: 0
-  bulletsSpawned: 0
+  maxSegments: 10
+  speedLevelStats:
+  - 200
+  - 250
+  - 300
+  - 350
+  - 400
+  fireRateLevelStats:
+  - 0.75
+  - 0.65
+  - 0.5
+  - 0.35
+  - 0.25
+  projectilesPerLevel:
+  - {fileID: 4032108297527577537, guid: 9d1066cd918c65c4991fff3013c012a8, type: 3}
 --- !u!1 &6771341910274921540
 GameObject:
   m_ObjectHideFlags: 0

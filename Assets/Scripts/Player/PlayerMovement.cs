@@ -11,11 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetDirection = Vector3.right;
     private Vector3 currentDirection = Vector3.right;
     private Rigidbody rigidbody;
+    private PlayerPowerups playerPowerups;
 
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         leftJoystick = UIManager.instance.leftJoystick;
+        playerPowerups = GetComponent<PlayerPowerups>();
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         currentDirection = Vector3.Slerp(currentDirection, targetDirection, slerpSpeed * Time.fixedDeltaTime);
-        Vector3 movementVelocity = currentDirection * movementSpeed * Time.fixedDeltaTime;
+        Vector3 movementVelocity = currentDirection * playerPowerups.GetSpeedStat() * Time.fixedDeltaTime;
         rigidbody.velocity = movementVelocity;
     }
 

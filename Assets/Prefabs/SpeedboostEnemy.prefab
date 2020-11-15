@@ -243,7 +243,7 @@ MonoBehaviour:
   movementSpeed: 5
   segmentDistance: 2
   powerupType: 1
-  powerupLevel: 1
+  powerupLevel: 0
   hasReachedTargetOnce: 0
 --- !u!1 &9191816245060257063
 GameObject:
